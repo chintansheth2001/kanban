@@ -1,0 +1,154 @@
+
+*{
+  box-sizing: border-box;
+}
+:root {
+  --svgStrokeColor: #787486;
+  --borderColor:  #DBDBDB;
+
+  --text5xl: 2.875rem;
+  --textLg:  1.125rem;
+  --textBase: 1rem;
+  --textSm:  0.875rem;
+  --textXs: 0.75rem;
+  
+
+  --colorMain: #0D062D;
+  --colorSecond: #787486;
+
+  --backgroundHover: rgba(80, 48, 229, 0.08);
+
+ 
+
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+   color: var(--colorSecond);
+ /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+input[type=search]{
+  font-size: var(--textSm);
+}
+
+p, h1, h2{
+  padding: 0;
+  margin: 0;
+}
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: var(--text5xl);
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--colorMain);
+}
+h2 {
+  font-size: var(--textLg);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--colorMain);
+}
+
+.text500sm{
+  font-weight: 500;
+  color: var( --colorMain);
+  font-size: var(--textSm);
+}
+.text400xs{
+  font-size: var( --textXs);
+}  
+
+.avtar{
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+}
+
+.avtar-number{
+  width: 38px;
+  height: 38px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  background:#F4D7DA;
+  color: #D25B68;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+
+.dropdown-btn{
+  display: flex;
+  gap:  8px;
+  align-items: center;
+  border: 1px solid #787486;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.view-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.view-icon.pause svg{
+  rotate: 90deg;
+}
+.view-icon svg{
+  fill: #fff !important;
+}
+.view-icon:hover, .view-icon.active{
+  background: #5030E5;
+  
+}
+.view-icon:hover svg, .view-icon.active svg{
+  fill: #fff !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
