@@ -1,0 +1,50 @@
+@import '../_mixinandvars.scss';
+
+
+.title-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .projec-title-col{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .title-icon{
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+  .invite-col{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    margin-right: 10px;
+    .invite-link{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      color: #5030E5;
+    }
+  }
+  .avtars-col{
+    display: flex;
+    .avtar, .avtar-number{
+      margin-right: -10px;
+    }
+  }
+}
+@include mtos{
+}
+@include stox{
+  .title-row{
+    flex-direction: column;
+    gap:24px;
+    align-items: flex-start;
+    .projec-title-col{
+      
+      gap:8px
+    }
+  }
+}

@@ -1,5 +1,6 @@
-import Logo from "../assets/logo.svg";
+import "./Header.scss";
 import Av1 from "../assets/av1.jpg";
+
 import ArrowLeft from "../assets/arrowLeft.svg";
 import {
   SearchNormal1,
@@ -9,10 +10,20 @@ import {
   ArrowDown2,
 } from "iconsax-react";
 
-const Header = () => {
+const Header = ({ handleSidebar }) => {
   return (
     <header className="header">
-      <section className="logo-section">
+      <section className="mobile-menu">
+        <div
+          className="arrow-left"
+          onClick={() => {
+            handleSidebar();
+          }}
+        >
+          <img src={ArrowLeft} alt="Arrow Left" />
+        </div>
+      </section>
+      {/* <section className="logo-section">
         <div className="logo">
           <img src={Logo} alt="Project M." />
           Project M.
@@ -20,7 +31,7 @@ const Header = () => {
         <div className="arrow-left">
           <img src={ArrowLeft} alt="Arrow Left" />
         </div>
-      </section>
+      </section> */}
       <section className="search-section">
         <SearchNormal1 className="search-icon" size="24" color="#787486" />
         <input

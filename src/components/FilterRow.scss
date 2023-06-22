@@ -1,0 +1,34 @@
+@import '../_mixinandvars.scss';
+
+
+
+.filter-row{
+  display: flex;
+  justify-content: space-between;
+  .fr-filter-col{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .fr-share-col{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .sptr{
+      border-right:1px solid #787486;
+      height: 28px;
+    }
+  }
+}
+
+
+@include mtos{
+}
+@include stox{
+  .filter-row{
+    .dropdown-btn span{ display: none;}
+    .fr-share-col{
+      gap: 16px;
+    }
+  }
+}

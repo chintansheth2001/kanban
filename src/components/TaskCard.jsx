@@ -9,7 +9,7 @@ function TaskCard() {
     <div className="task-card">
       <div className="card-info">
         <div className="priority-row">
-          <span className="priority-row--text">Low</span>
+          <span className="priority-row-text">Low</span>
           <span className="priority-row-more">. . .</span>
         </div>
         <h2 className="card-title">Brainstorming</h2>
@@ -24,10 +24,10 @@ function TaskCard() {
           <img className="avtar" src={av4} alt="User Name" />
         </div>
         <div className="card-sta">
-          <span className="card-sta--item">
+          <span className="card-sta-item">
             <Message size="16" color="#787486" /> 10 comments
           </span>
-          <span className="card-sta--item">
+          <span className="card-sta-item">
             <Folder2 size="16" color="#787486" />3 files
           </span>
         </div>

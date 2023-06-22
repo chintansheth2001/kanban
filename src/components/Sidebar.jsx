@@ -1,5 +1,6 @@
-import React from "react";
-
+import "./Sidebar.scss";
+import Logo from "../assets/logo.svg";
+import ArrowLeft from "../assets/arrowLeft.svg";
 import {
   Category,
   Message,
@@ -9,25 +10,39 @@ import {
   AddSquare,
   LampOn,
 } from "iconsax-react";
-const Sidebar = () => {
+const Sidebar = ({ handleSidebar }) => {
   return (
-    <section className="sidebar">
+    <aside className="sidebar">
+      <section className="logo-section">
+        <div className="logo">
+          <img src={Logo} alt="Project M." />
+          Project M.
+        </div>
+        <div
+          className="arrow-left"
+          onClick={() => {
+            handleSidebar();
+          }}
+        >
+          <img src={ArrowLeft} alt="Arrow Left" />
+        </div>
+      </section>
       <nav className="sb-menu-section">
-        <div className="menu-item">
+        <a className="menu-item">
           <Category size="24" color="#787486" /> Home
-        </div>
-        <div className="menu-item">
+        </a>
+        <a className="menu-item">
           <Message size="24" color="#787486" /> Messages
-        </div>
-        <div className="menu-item">
+        </a>
+        <a className="menu-item">
           <TaskSquare size="24" color="#787486" /> Tasks
-        </div>
-        <div className="menu-item">
+        </a>
+        <a className="menu-item">
           <Profile2User size="24" color="#787486" /> Members
-        </div>
-        <div className="menu-item">
+        </a>
+        <a className="menu-item">
           <Setting2 size="24" color="#787486" /> Settings
-        </div>
+        </a>
       </nav>
       <section className="project-section">
         <div className="section-title">
@@ -35,22 +50,22 @@ const Sidebar = () => {
         </div>
       </section>
       <section className="project-list-section">
-        <div className="porject-item active">
+        <a className="porject-item active">
           Mobile App
           <span className="more-dot">. . .</span>
-        </div>
-        <div className="porject-item orange">
+        </a>
+        <a className="porject-item orange">
           Website Redesign
           <span className="more-dot">. . .</span>
-        </div>
-        <div className="porject-item purple">
+        </a>
+        <a className="porject-item purple">
           Design System
           <span className="more-dot">. . .</span>
-        </div>
-        <div className="porject-item blue">
+        </a>
+        <a className="porject-item blue">
           Wireframes
           <span className="more-dot">. . .</span>
-        </div>
+        </a>
       </section>
       <section className="thought-section">
         <div className="lamp">
@@ -63,7 +78,7 @@ const Sidebar = () => {
         </p>
         <button className="button1">Write a message</button>
       </section>
-    </section>
+    </aside>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import "./TitleRow.scss";
 import Pencil from "../assets/edit.svg";
 import Link from "../assets/link.svg";
 import Add from "../assets/add-square.svg";

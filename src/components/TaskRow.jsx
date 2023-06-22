@@ -1,4 +1,4 @@
-import React from "react";
+import "./TaskRow.scss";
 import TasksBox from "./TasksBox";
 
 function TaskRow() {
@@ -7,7 +7,6 @@ function TaskRow() {
       <TasksBox />
       <TasksBox />
       <TasksBox />
-      
     </div>
   );
 }

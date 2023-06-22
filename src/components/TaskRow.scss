@@ -1,0 +1,16 @@
+@import '../_mixinandvars.scss';
+.task-row{
+  display: flex;
+  gap:16px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+@include mtos{
+}
+@include stox{
+  .task-row{
+    overflow: hidden;
+    flex-direction: column;
+  }
+}
