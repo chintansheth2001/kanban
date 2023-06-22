@@ -1,3 +1,4 @@
+import PopupMenu from "./PopupMenu";
 import "./Sidebar.scss";
 import Logo from "../assets/logo.svg";
 import ArrowLeft from "../assets/arrowLeft.svg";
@@ -46,13 +47,14 @@ const Sidebar = ({ handleSidebar }) => {
       </nav>
       <section className="project-section">
         <div className="section-title">
-          my projects <AddSquare size="14" color="#787486" />
+          my projects
+          <PopupMenu trigger={<AddSquare size="14" color="#787486" />} />
         </div>
       </section>
       <section className="project-list-section">
         <a className="porject-item active">
           Mobile App
-          <span className="more-dot">. . .</span>
+          <PopupMenu trigger={<span className="more-dot">. . .</span>} />
         </a>
         <a className="porject-item orange">
           Website Redesign

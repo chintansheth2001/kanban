@@ -16,7 +16,7 @@
   --colorMain: #0D062D;
   --colorSecond: #787486;
 
-  --sidebarLinkHover: #f1eefd;
+  --bgHover: #f1eefd;
   --backgroundPage: #F5F5F5;
 
  
@@ -53,8 +53,6 @@ p, h1, h2{
 input[type=search]{
   font-size: var(--textSm);
 }
-
-
 
 body {
   margin: 0;
@@ -114,6 +112,9 @@ h2 {
   padding: 8px 16px;
   font-weight: 500;
   cursor: pointer;
+}
+.dropdown-btn:hover{
+  background: var(--bgHover);
 }
 
 .view-icon{

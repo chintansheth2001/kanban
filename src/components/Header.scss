@@ -5,11 +5,13 @@
   height: 88px;
   display: flex;
   align-items: center;
+  gap:16px;
+  padding: 0 48px
 }
 
 
 .search-section{
-  margin-left: 48px;
+  
   margin-right: 16px;
   height: 44px;
   max-width: 418px;
@@ -61,7 +63,6 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-right: 48px;
   cursor: pointer;
   .user-name-cal{
     text-align: right;
@@ -78,7 +79,6 @@
 }
 .mobile-menu{
   display: none;
-  padding-left: 48px;
   .arrow-left{
     rotate: 180deg;
   }
@@ -86,28 +86,27 @@
 
 
 @include mtos{
+  .header{
+    padding: 0 16px;
+  }
+
   
   .mobile-menu{
     display: block;
   }
-  .search-section{
-    margin-left: 16px;
-   
-  }
+  
 }
 
 @include stox{
   .header{
     flex-wrap: wrap;
-    padding-top: 16px;
+    padding: 16px;
     height: auto;
+    
   }
-  .mobile-menu{
-    padding-left: 16px;
-  }
+  
   .cuser-section {
     margin-left: 16px;
-    margin-right: 16px;
     .user-name-cal{
       display: none;
     }
@@ -117,7 +116,8 @@
     max-width: 100%;
     flex-basis: 100%;
     order: 1;
-    margin: 16px;
+    margin: 0;
+    
   }
   .icons-section{
     gap: 16px;

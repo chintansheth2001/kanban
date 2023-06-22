@@ -12,6 +12,13 @@ const App = () => {
   const handleSidebar = () => {
     setCloseSB(!colseSB);
   };
+
+  React.useState(() => {
+    if (window.innerWidth < 1024) {
+      setCloseSB(!colseSB);
+    }
+  }, []);
+
   return (
     <div className={`app ${colseSB ? "close-sidebar" : ""}`}>
       <Sidebar handleSidebar={handleSidebar} />

@@ -50,7 +50,7 @@
       border-radius: 6px;
       cursor: pointer;
       &:hover{
-        background: var(--sidebarLinkHover);
+        background: var(--bgHover);
       }
     }
   }
@@ -104,9 +104,11 @@
         background: rgba(118, 165, 234, 1);
       }
     }
-    
-    .more-dot{
+    .dropdown-cover{
       margin-left: auto;
+    }
+    .more-dot{
+      
       letter-spacing: -0.07em;
       margin-top: -8px;
       display: none;
@@ -114,7 +116,7 @@
      
     }
     &:hover, &.active{
-      background: var(--sidebarLinkHover);
+      background: var(--bgHover);
       color: var(--colorMain);
       .more-dot{
         display: block;
@@ -159,7 +161,7 @@
     border: none;
     cursor: pointer;
     &:hover{
-      background: var(--sidebarLinkHover);
+      background: var(--bgHover);
     }
   }
 }

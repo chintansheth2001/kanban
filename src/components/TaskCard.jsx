@@ -1,4 +1,4 @@
-import React from "react";
+import PopupMenu from "./PopupMenu";
 import { Message, Folder2 } from "iconsax-react";
 import av2 from "../assets/av2.jpg";
 import av3 from "../assets/av3.jpg";
@@ -10,7 +10,11 @@ function TaskCard() {
       <div className="card-info">
         <div className="priority-row">
           <span className="priority-row-text">Low</span>
-          <span className="priority-row-more">. . .</span>
+
+          <PopupMenu
+            right={true}
+            trigger={<span className="priority-row-more">. . .</span>}
+          />
         </div>
         <h2 className="card-title">Brainstorming</h2>
         <p className="card-detais">

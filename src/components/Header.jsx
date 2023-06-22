@@ -1,3 +1,4 @@
+import PopupMenu from "./PopupMenu";
 import "./Header.scss";
 import Av1 from "../assets/av1.jpg";
 
@@ -47,14 +48,20 @@ const Header = ({ handleSidebar }) => {
           <Notification size="24" color="#787486" />
         </span>
       </section>
-      <section className="cuser-section">
-        <div className="user-name-cal">
-          <div className="user-name">Anima Agrawal</div>
-          <div className="user-location">U.P, India</div>
-        </div>
-        <img className="avtar" src={Av1} alt="Avtar" />
-        <ArrowDown2 className="arrow-down" size="24" color="#292D32" />
-      </section>
+
+      <PopupMenu
+        right={true}
+        trigger={
+          <section className="cuser-section">
+            <div className="user-name-cal">
+              <div className="user-name">Anima Agrawal</div>
+              <div className="user-location">U.P, India</div>
+            </div>
+            <img className="avtar" src={Av1} alt="Avtar" />
+            <ArrowDown2 className="arrow-down" size="24" color="#292D32" />
+          </section>
+        }
+      />
     </header>
   );
 };
