@@ -1,3 +1,4 @@
+import PopupMenu from "./PopupMenu";
 import "./TitleRow.scss";
 import Pencil from "../assets/edit.svg";
 import Link from "../assets/link.svg";
@@ -16,10 +17,14 @@ function TitleRow() {
         <img className="title-icon" src={Link} alt="Link" />
       </div>
       <div className="invite-col">
-        <span className="invite-link">
-          <img src={Add} alt="Invite" />
-          Invite
-        </span>
+        <PopupMenu
+          trigger={
+            <span className="invite-link">
+              <img src={Add} alt="Invite" />
+              Invite
+            </span>
+          }
+        />
         <div className="avtars-col">
           <img className="avtar" src={av2} alt="User Name" />
           <img className="avtar" src={av3} alt="User Name" />

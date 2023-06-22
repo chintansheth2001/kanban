@@ -100,7 +100,7 @@
 
 @include mtos{
   .app{
-    border: 1px solid red;
+    
     border-radius: 8px;
     &::after{
       display: block;
@@ -109,9 +109,7 @@
 }
 
 @include stox{
-  .app{
-    border: 1px solid green;
-  }
+ 
   .content-section{
     margin: 16px;
   }

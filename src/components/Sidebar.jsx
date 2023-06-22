@@ -1,16 +1,9 @@
 import PopupMenu from "./PopupMenu";
+import { ProjectM } from "../data";
 import "./Sidebar.scss";
 import Logo from "../assets/logo.svg";
 import ArrowLeft from "../assets/arrowLeft.svg";
-import {
-  Category,
-  Message,
-  TaskSquare,
-  Profile2User,
-  Setting2,
-  AddSquare,
-  LampOn,
-} from "iconsax-react";
+import { AddSquare, LampOn } from "iconsax-react";
 const Sidebar = ({ handleSidebar }) => {
   return (
     <aside className="sidebar">
@@ -29,21 +22,13 @@ const Sidebar = ({ handleSidebar }) => {
         </div>
       </section>
       <nav className="sb-menu-section">
-        <a className="menu-item">
-          <Category size="24" color="#787486" /> Home
-        </a>
-        <a className="menu-item">
-          <Message size="24" color="#787486" /> Messages
-        </a>
-        <a className="menu-item">
-          <TaskSquare size="24" color="#787486" /> Tasks
-        </a>
-        <a className="menu-item">
-          <Profile2User size="24" color="#787486" /> Members
-        </a>
-        <a className="menu-item">
-          <Setting2 size="24" color="#787486" /> Settings
-        </a>
+        {ProjectM.menu.map((i) => {
+          return (
+            <a key={i.id} className="menu-item" title={i.title}>
+              <i.icon size="24" color="#787486" /> {i.title}
+            </a>
+          );
+        })}
       </nav>
       <section className="project-section">
         <div className="section-title">
@@ -52,22 +37,18 @@ const Sidebar = ({ handleSidebar }) => {
         </div>
       </section>
       <section className="project-list-section">
-        <a className="porject-item active">
-          Mobile App
-          <PopupMenu trigger={<span className="more-dot">. . .</span>} />
-        </a>
-        <a className="porject-item orange">
-          Website Redesign
-          <span className="more-dot">. . .</span>
-        </a>
-        <a className="porject-item purple">
-          Design System
-          <span className="more-dot">. . .</span>
-        </a>
-        <a className="porject-item blue">
-          Wireframes
-          <span className="more-dot">. . .</span>
-        </a>
+        {ProjectM.projects.map((i) => {
+          return (
+            <a
+              key={i.id}
+              className={`porject-item ${i.active ? "active" : ""} ${i.color}`}
+              title={i.title}
+            >
+              {i.title}
+              <PopupMenu trigger={<span className="more-dot">. . .</span>} />
+            </a>
+          );
+        })}
       </section>
       <section className="thought-section">
         <div className="lamp">
