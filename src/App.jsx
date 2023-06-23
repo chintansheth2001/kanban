@@ -5,7 +5,7 @@ import Sidebar from "./components/Sidebar";
 import TitleRow from "./components/TitleRow";
 import FilterRow from "./components/FilterRow";
 import TaskRow from "./components/TaskRow";
-import Header from "./components/header";
+import Header from "./components/Header";
 import { AppContext } from "./components/AppContext";
 import { TOGGLE_SIDEBAR } from "./components/ActionType";
 
