@@ -9,7 +9,7 @@
   .projec-title-col{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     .title-icon{
       margin-top: 10px;
       cursor: pointer;
@@ -31,7 +31,7 @@
   .avtars-col{
     display: flex;
     .avtar, .avtar-number{
-      margin-right: -10px;
+      margin-right: -8px;
     }
   }
 }

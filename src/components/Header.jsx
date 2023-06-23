@@ -29,17 +29,8 @@ const Header = () => {
           <img src={ArrowLeft} alt="Arrow Left" />
         </div>
       </section>
-      {/* <section className="logo-section">
-        <div className="logo">
-          <img src={Logo} alt="Project M." />
-          Project M.
-        </div>
-        <div className="arrow-left">
-          <img src={ArrowLeft} alt="Arrow Left" />
-        </div>
-      </section> */}
       <section className="search-section">
-        <SearchNormal1 className="search-icon" size="24" color="#787486" />
+        <SearchNormal1 className="search-icon" size="23" color="#787486" />
         <input
           className="input-search"
           placeholder="Search for anything..."
@@ -63,7 +54,7 @@ const Header = () => {
               <div className="user-location">U.P, India</div>
             </div>
             <img className="avtar" src={Av1} alt="Avtar" />
-            <ArrowDown2 className="arrow-down" size="24" color="#292D32" />
+            <ArrowDown2 className="arrow-down" size="18" color="#292D32" />
           </section>
         }
       />

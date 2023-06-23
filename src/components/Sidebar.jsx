@@ -60,7 +60,7 @@ const Sidebar = () => {
       </section>
       <section className="thought-section">
         <div className="lamp">
-          <LampOn size="32" color="#fbcb18" />
+          <LampOn size="23" color="#fbcb18" />
         </div>
         <div className="text500sm">Thoughts Time</div>
         <p className="text400xs">

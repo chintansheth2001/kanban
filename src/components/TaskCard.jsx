@@ -15,7 +15,7 @@ function TaskCard({
 }) {
   return (
     <Draggable draggableId={id} index={index}>
-      {(provided) => (
+      {(provided, snapshot) => (
         <div
           className="task-card"
           id={id}
@@ -23,7 +23,11 @@ function TaskCard({
           {...provided.dragHandleProps}
           ref={provided.innerRef}
         >
-          <div className="card-info">
+          <div
+            className={`card-info ${
+              snapshot.isDraggingOver ? "placeholder" : ""
+            }`}
+          >
             <div className="priority-row">
               <span className={`priority-row-text ${priority}`}>
                 {priority}
