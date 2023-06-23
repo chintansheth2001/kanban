@@ -41,6 +41,39 @@
   .dropdown-cover{
     margin-left: auto;
   }
+  &.green{
+    .tasks-box-dot{
+      background: var(--bgGreen);
+    }
+    .tasks-box-title{
+      border-bottom: 3px solid var(--bgGreen);
+    }
+  }
+  &.orange{
+    .tasks-box-dot{
+      background: var(--bgOrange);
+    }
+    .tasks-box-title{
+      border-bottom: 3px solid var(--bgOrange);
+    }
+  }
+  &.purple{
+    .tasks-box-dot{
+      background: var(--bgPurple);
+    }
+    .tasks-box-title{
+      border-bottom: 3px solid var(--bgPurple);
+    }
+  }
+  &.blue{
+    .tasks-box-dot{
+      background: var(--bgBlue);
+    }
+    .tasks-box-title{
+      border-bottom: 3px solid var(--bgBlue);
+    }
+  }
+
 }
 
 @include mtos{

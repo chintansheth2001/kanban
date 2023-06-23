@@ -18,10 +18,12 @@
 
   --bgHover: #f1eefd;
   --backgroundPage: #F5F5F5;
+  --bgGreen:  rgba(122, 197, 85, 1);
+  --bgOrange:rgba(255, 165, 0, 1);
+  --bgPurple:  #5030E5;
+  --bgBlue: rgba(118, 165, 234, 1);
 
  
-
-
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;

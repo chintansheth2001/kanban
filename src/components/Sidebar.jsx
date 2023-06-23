@@ -1,10 +1,15 @@
+import React from "react";
 import PopupMenu from "./PopupMenu";
-import { ProjectM } from "../data";
 import "./Sidebar.scss";
 import Logo from "../assets/logo.svg";
 import ArrowLeft from "../assets/arrowLeft.svg";
 import { AddSquare, LampOn } from "iconsax-react";
-const Sidebar = ({ handleSidebar }) => {
+import { AppContext } from "./AppContext";
+import { TOGGLE_SIDEBAR } from "./ActionType";
+
+const Sidebar = () => {
+  const [state, dispatch] = React.useContext(AppContext);
+  const { menu, projects, sidebarClose } = state;
   return (
     <aside className="sidebar">
       <section className="logo-section">
@@ -15,14 +20,14 @@ const Sidebar = ({ handleSidebar }) => {
         <div
           className="arrow-left"
           onClick={() => {
-            handleSidebar();
+            dispatch({ type: TOGGLE_SIDEBAR, payload: sidebarClose });
           }}
         >
           <img src={ArrowLeft} alt="Arrow Left" />
         </div>
       </section>
       <nav className="sb-menu-section">
-        {ProjectM.menu.map((i) => {
+        {menu.map((i) => {
           return (
             <a key={i.id} className="menu-item" title={i.title}>
               <i.icon size="24" color="#787486" /> {i.title}
@@ -37,7 +42,7 @@ const Sidebar = ({ handleSidebar }) => {
         </div>
       </section>
       <section className="project-list-section">
-        {ProjectM.projects.map((i) => {
+        {projects.map((i) => {
           return (
             <a
               key={i.id}

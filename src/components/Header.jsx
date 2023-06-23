@@ -1,6 +1,9 @@
+import React from "react";
 import PopupMenu from "./PopupMenu";
 import "./Header.scss";
 import Av1 from "../assets/av1.jpg";
+import { AppContext } from "./AppContext";
+import { TOGGLE_SIDEBAR } from "./ActionType";
 
 import ArrowLeft from "../assets/arrowLeft.svg";
 import {
@@ -11,14 +14,16 @@ import {
   ArrowDown2,
 } from "iconsax-react";
 
-const Header = ({ handleSidebar }) => {
+const Header = () => {
+  const [state, dispatch] = React.useContext(AppContext);
+  const { sidebarClose } = state;
   return (
     <header className="header">
       <section className="mobile-menu">
         <div
           className="arrow-left"
           onClick={() => {
-            handleSidebar();
+            dispatch({ type: TOGGLE_SIDEBAR, payload: sidebarClose });
           }}
         >
           <img src={ArrowLeft} alt="Arrow Left" />

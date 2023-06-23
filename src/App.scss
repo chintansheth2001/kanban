@@ -44,59 +44,7 @@
   overflow: hidden;
 }
 
-.task-card{
-  background: #FFFFFF;
-  border-radius: 16px;
-  padding: 20px;
-  gap:24px;
-  display: flex;
-  flex-direction: column;
-  .priority-row{
-    margin-bottom: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .priority-row-text{
-      background: rgba(223, 168, 116, 0.2);
-      border-radius: 4px;
-      padding: 4px 6px;
-      font-size: var(--textXs);
-      color:  #D58D49;
 
-    }
-    .priority-row-more{
-        font-weight: 800;
-        color: var(--colorMain);
-        cursor: pointer;
-    }
-  }
-  .card-title{
-    margin-bottom: 4px;
-  }
-  .card-detais{
-    font-size: var(--textXs);
-  }
-  .card-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .card-users .avtar{
-      width: 24px;
-      height: 24px;
-      margin-left: -6px;
-    }
-    .card-sta{
-      display: flex;
-      gap: 12px;
-      font-size: var(--textXs);
-      .card-sta-item{
-        display: flex;
-        align-items: center;
-        gap:4px;
-      }
-    }
-  }
-}
 
 @include mtos{
   .app{

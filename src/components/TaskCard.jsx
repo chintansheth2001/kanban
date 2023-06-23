@@ -1,38 +1,46 @@
 import PopupMenu from "./PopupMenu";
 import { Message, Folder2 } from "iconsax-react";
-import av2 from "../assets/av2.jpg";
-import av3 from "../assets/av3.jpg";
-import av4 from "../assets/av4.jpg";
-
-function TaskCard() {
+import "./TaskCard.scss";
+function TaskCard({
+  id,
+  title,
+  text,
+  users,
+  comments,
+  files,
+  priority,
+  image,
+}) {
   return (
-    <div className="task-card">
+    <div className="task-card" id={id}>
       <div className="card-info">
         <div className="priority-row">
-          <span className="priority-row-text">Low</span>
+          <span className={`priority-row-text ${priority}`}>{priority}</span>
 
           <PopupMenu
             right={true}
             trigger={<span className="priority-row-more">. . .</span>}
           />
         </div>
-        <h2 className="card-title">Brainstorming</h2>
-        <p className="card-detais">
-          Brainstorming brings team members' diverse experience into play.{" "}
-        </p>
+        <h2 className="card-title">{title}</h2>
+        {text && <p className="card-detais">{text}</p>}
+        {image && <img src={image} alt={title} />}
       </div>
       <div className="card-footer">
-        <div className="card-users">
-          <img className="avtar" src={av2} alt="User Name" />
-          <img className="avtar" src={av3} alt="User Name" />
-          <img className="avtar" src={av4} alt="User Name" />
-        </div>
+        {users && (
+          <div className="card-users">
+            {users.map((i, ind) => (
+              <img key={ind} className="avtar" src={i} alt="User Name" />
+            ))}
+          </div>
+        )}
         <div className="card-sta">
           <span className="card-sta-item">
-            <Message size="16" color="#787486" /> 10 comments
+            <Message size="16" color="#787486" /> {comments} comments
           </span>
           <span className="card-sta-item">
-            <Folder2 size="16" color="#787486" />3 files
+            <Folder2 size="16" color="#787486" />
+            {files} files
           </span>
         </div>
       </div>

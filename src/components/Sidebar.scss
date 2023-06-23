@@ -86,22 +86,21 @@
       width: 8px;
       height: 8px;
       border-radius: 4px;
-      background: rgba(122, 197, 85, 1);
-
+      background: var(--bgGreen);
     }
     &.orange{
       &::before{
-        background: rgba(255, 165, 0, 1);
+        background: var(--bgOrange);
       }
     }
     &.purple{
       &::before{
-        background: rgba(228, 204, 253, 1);
+        background: var(--bgPurple);
       }
     }
     &.blue{
       &::before{
-        background: rgba(118, 165, 234, 1);
+        background: var(--bgBlue)
       }
     }
     .dropdown-cover{
