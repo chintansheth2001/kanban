@@ -5,7 +5,7 @@ import Logo from "../assets/logo.svg";
 import ArrowLeft from "../assets/arrowLeft.svg";
 import { AddSquare, LampOn } from "iconsax-react";
 import { AppContext } from "./AppContext";
-import { TOGGLE_SIDEBAR } from "./ActionType";
+import { TOGGLE_SIDEBAR, CHANGE_ACTIVE_PROJECT } from "./ActionType";
 
 const Sidebar = () => {
   const [state, dispatch] = React.useContext(AppContext);
@@ -48,6 +48,9 @@ const Sidebar = () => {
               key={i.id}
               className={`porject-item ${i.active ? "active" : ""} ${i.color}`}
               title={i.title}
+              onClick={() => {
+                dispatch({ type: CHANGE_ACTIVE_PROJECT, payload: i.id });
+              }}
             >
               {i.title}
               <PopupMenu trigger={<span className="more-dot">. . .</span>} />

@@ -4,8 +4,6 @@ import {
   TaskSquare,
   Profile2User,
   Setting2,
-  AddSquare,
-  LampOn,
 } from "iconsax-react";
 import av1 from "../assets/av1.jpg";
 import av2 from "../assets/av2.jpg";
@@ -18,7 +16,7 @@ import cardi2 from "../assets/cardi2.png";
 import cardi3 from "../assets/cardi3.png";
 
 const task1 = {
-  id: 1,
+  id: "draggable1",
   title: "Brainstorming",
   text: "Brainstorming brings team members diverse experience into play. ",
   users: [av2, av5, av4],
@@ -28,7 +26,7 @@ const task1 = {
   image: "",
 };
 const task2 = {
-  id: 2,
+  id: "draggable2",
   title: "Research",
   text: "User research helps you to create an optimal product for users. ",
   users: [av3, av6],
@@ -38,7 +36,7 @@ const task2 = {
   image: "",
 };
 const task3 = {
-  id: 3,
+  id: "draggable3",
   title: "Wireframes",
   text: "Low fidelity wireframes include the most basic content and visuals.",
   users: [av2, av6, av5],
@@ -49,7 +47,7 @@ const task3 = {
 };
 
 const task4 = {
-  id: 4,
+  id: "draggable4",
   title: "Mockup",
   text: "Low fidelity mockup include the most basic content and visuals.",
   users: [av1, av2],
@@ -60,7 +58,7 @@ const task4 = {
 };
 
 const task5 = {
-  id: 5,
+  id: "draggable5",
   title: "Onboarding Illustrations ",
   text: "",
   users: [av4, av5, av2],
@@ -71,7 +69,7 @@ const task5 = {
 };
 
 const task6 = {
-  id: 6,
+  id: "draggable6",
   title: "Moodboard ",
   text: "",
   users: [av4],
@@ -82,7 +80,7 @@ const task6 = {
 };
 
 const task7 = {
-  id: 7,
+  id: "draggable7",
   title: "User Journeys ",
   text: "User journeys are the step-by-step journey that a user takes to reach their goal.",
   users: [av6, av5],
@@ -93,7 +91,7 @@ const task7 = {
 };
 
 const task8 = {
-  id: 8,
+  id: "draggable8",
   title: "Mobile App Design",
   text: "",
   users: [av6, av5],
@@ -104,7 +102,7 @@ const task8 = {
 };
 
 const task9 = {
-  id: 9,
+  id: "draggable9",
   title: "Design System",
   text: "It just needs to adapt the UI from what you did before ",
   users: [av2, av4, av5],
@@ -117,18 +115,66 @@ const task9 = {
 const sidebarClose = false;
 const MobileAppData = [
   {
-    id: 1,
+    id: "droppable1",
     title: "To Do",
     color: "purple",
     tasks: [task1, task2, task3, task4],
   },
   {
-    id: 2,
+    id: "droppable2",
     title: "On Progress",
     color: "orange",
     tasks: [task5, task6, task7],
   },
-  { id: 3, title: "Done", color: "green", tasks: [task8, task9] },
+  { id: "droppable3", title: "Done", color: "green", tasks: [task8, task9] },
+];
+
+const WebsiteRedesign = [
+  {
+    id: "droppable1",
+    title: "WR To Do",
+    color: "purple",
+    tasks: [task1, task2, task3, task4],
+  },
+  {
+    id: "droppable2",
+    title: "WR On Progress",
+    color: "orange",
+    tasks: [task5, task6, task7],
+  },
+  { id: "droppable3", title: "WR Done", color: "green", tasks: [task8, task9] },
+];
+
+const DesignSystem = [
+  {
+    id: "droppable1",
+    title: "DS To Do",
+    color: "purple",
+    tasks: [task1, task2, task3, task4],
+  },
+  {
+    id: "droppable2",
+    title: "DS On Progress",
+    color: "orange",
+    tasks: [task5, task6, task7],
+  },
+  { id: "droppable3", title: "DS Done", color: "green", tasks: [task8, task9] },
+];
+
+const Wireframes = [
+  {
+    id: "droppable1",
+    title: "W To Do",
+    color: "purple",
+    tasks: [task1, task2, task3, task4],
+  },
+  {
+    id: "droppable2",
+    title: "W On Progress",
+    color: "orange",
+    tasks: [task5, task6, task7],
+  },
+  { id: "droppable3", title: "W Done", color: "green", tasks: [task8, task9] },
 ];
 
 export const appData = {
@@ -152,21 +198,21 @@ export const appData = {
       title: "Website Redesign",
       color: "orange",
       active: false,
-      tasksCol: MobileAppData,
+      tasksCol: WebsiteRedesign,
     },
     {
       id: 3,
       title: "Design System",
       color: "purple",
       active: false,
-      tasksCol: MobileAppData,
+      tasksCol: DesignSystem,
     },
     {
       id: 4,
       title: "Wireframes",
       color: "blue",
       active: false,
-      tasksCol: MobileAppData,
+      tasksCol: Wireframes,
     },
   ],
   sidebarClose,
