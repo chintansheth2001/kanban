@@ -1,11 +1,11 @@
 import React from "react";
 
 import "./App.scss";
-import Header from "./components/header";
 import Sidebar from "./components/Sidebar";
 import TitleRow from "./components/TitleRow";
 import FilterRow from "./components/FilterRow";
 import TaskRow from "./components/TaskRow";
+import Header from "./components/header";
 import { AppContext } from "./components/AppContext";
 import { TOGGLE_SIDEBAR } from "./components/ActionType";
 
