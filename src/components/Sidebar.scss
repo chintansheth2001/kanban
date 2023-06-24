@@ -26,7 +26,7 @@
     width: 26px;
     height: 20px;
     position: relative;
-    
+    cursor: pointer;
     svg{
       position: relative;
     }
@@ -37,6 +37,7 @@
   flex-shrink: 0;
   width: 250px;
   border-right:  1px solid var( --borderColor);
+  transition: 0.2s ease-in;
   .sb-menu-section{
     border-bottom: 1px solid var( --borderColor);
     padding: 14px 0 16px 0;
@@ -54,6 +55,10 @@
       }
     }
   }
+  & > section,& > nav{
+    opacity: 1;
+    transition: 0.1s linear;
+  }
 }
 .project-section{
   .section-title{
@@ -66,7 +71,6 @@
     padding: 12px;
     margin: 0 12px;
     color: var(--colorSecond)
-
   }
 }
 
