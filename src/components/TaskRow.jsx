@@ -30,13 +30,13 @@ function TaskRow() {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="task-row">
-        {tasksCol.map((i) => (
+        {tasksCol.map((i, index) => (
           <TasksBox
             key={i.id}
             id={i.id}
             color={i.color}
             title={i.title}
-            addBtn={i.id === 1}
+            addBtn={index === 0}
             tasks={i.tasks}
           />
         ))}
